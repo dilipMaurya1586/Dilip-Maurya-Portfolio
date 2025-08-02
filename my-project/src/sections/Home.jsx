@@ -78,7 +78,7 @@ const Home = ({ selectedColor, isDarkMode }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={downloadResume}
-                className=" h-10 w-35 px-4 py-1 mx-6 my-6 rounded-full"
+                className=" h-10 px-4 py- mx-6 my-6 rounded-full"
                 style={{ backgroundColor: selectedColor.value, color: 'white' }}
               >
                 Download Resume

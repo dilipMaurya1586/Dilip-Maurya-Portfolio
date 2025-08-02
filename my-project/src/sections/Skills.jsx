@@ -75,7 +75,7 @@ const Skills = ({ delay, id, selectedColor, isDarkMode }) => {
                 whileHover={{ y: -5 }}
                 key={index}
                 className={`p-2 m-2 rounded-lg flex flex-col items-center 
-                                    ${selectedColor.bg} bg-opacity-10 dark:bg-opacity-20 bg-gray-500`} >
+                                  ${isDarkMode ? "bg-gray-800" : "bg-gray-200" } bg-opacity-10 dark:bg-opacity-20 `} >
                 <span className="text-3xl mb-2">{tool.icon}</span>
                 <span className="text-center">{tool.name}</span>
               </motion.div>

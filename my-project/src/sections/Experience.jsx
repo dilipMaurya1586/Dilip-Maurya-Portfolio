@@ -6,7 +6,7 @@ const Experience = ({ id, selectedColor, isDarkMode }) => {
     return (
         <section id={id} className="">
             <div className="absolute inset-0 -z-10 overflow-hidden">
-                <div className={`absolute inset-0 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`} />
+                <div className={`absolute inset-0 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`} />
                 <div
                     className="absolute top-0 left-0 w-full h-full opacity-5"
                     style={{
