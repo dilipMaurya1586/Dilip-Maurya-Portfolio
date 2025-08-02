@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import ExperienceCard from '../components/ExperienceCard';
-import { experienceData } from '../constants/Experience';
+import { experienceData } from '../constants/experience.jsx'
 
 const Experience = ({ id, selectedColor, isDarkMode }) => {
     return (
