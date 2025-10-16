@@ -2,6 +2,14 @@ import { CodeBracketIcon, CpuChipIcon, DevicePhoneMobileIcon } from '@heroicons/
 
 export const projects = [
   {
+    title: 'ChatGPT',
+    description: 'I have created a Chatgpt application and used React JS, ImageKit for it.',
+    tags: ['MERN stack', 'JavaScript', 'JWT Token', 'AI api'],
+    image: '/assets/images/projectsImage/chatGPT.png',
+    link: 'https://chat-gpt-eight-opal.vercel.app/',
+    icon: <CpuChipIcon className="h-6 w-6" />
+  },
+  {
     title: 'Car Rental Application',
     description: 'Developed a full-stack car rental app, Dynamic car listings with custom pricing, and image uploads via ImageKit.io.',
     tags: ['MERN stack', 'JavaScript', 'JWT'],
