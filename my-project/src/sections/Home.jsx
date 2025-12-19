@@ -5,8 +5,8 @@ const Home = ({ selectedColor, isDarkMode }) => {
 
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/assets/cvPdf/Dilip_Resume';
-    link.download = '/assets/cvPdf/Dilip_Resume.pdf';
+    link.href = '/assets/cvPdf/Dilip_Resume-1.pdf';
+    link.download = '/assets/cvPdf/Dilip_Resume-1.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
