@@ -48,20 +48,5 @@ export const certifications = [
     year: "2024",
     icon: <ShieldCheckIcon className="h-6 w-6" />
   },
-  // {
-  //   id: 3,
-  //   title: "Certified Kubernetes Administrator",
-  //   issuer: "Cloud Native Computing",
-  //   year: "2022",
-  //   credential: "CKA-3847ZK42",
-  //   icon: <ShieldCheckIcon className="h-6 w-6" />
-  // },
-  // {
-  //   id: 4,
-  //   title: "TensorFlow Developer Certificate",
-  //   issuer: "Google",
-  //   year: "2021",
-  //   credential: "TFD-8472XL39",
-  //   icon: <BoltIcon className="h-6 w-6" />
-  // }
+
 ];

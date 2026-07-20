@@ -60,10 +60,28 @@ const Sidebar = ({ isOpen, toggleSidebar, selectedColor, isDarkMode }) => {
             variants={itemVariants}
             className="flex-1"
           >
-            <h1
+            {/* <h1
               className="m-5 p-7 tracking-widest ">
               <span style={{ color: selectedColor.value }} className='text-5xl font-bold ml-8 underline'>D</span>
               <span className='text-5xl font-bold underline'>ilip</span>
+            </h1> */}
+            <h1 className="m-5 p-7 tracking-widest">
+              <motion.span
+                whileHover={{ scale: 1.15 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                style={{
+                  color: selectedColor.value,
+                  display: "inline-block",
+                  transformOrigin: "center"
+                }}
+                className="text-5xl font-bold ml-8 underline cursor-pointer"
+              >
+                D
+              </motion.span>
+
+              <span className="text-5xl font-bold underline">
+                ilip
+              </span>
             </h1>
 
             <nav className="space-y-1.5 m-1 p-1 ml-14 ">

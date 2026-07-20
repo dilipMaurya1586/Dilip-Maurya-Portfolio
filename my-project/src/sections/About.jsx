@@ -18,13 +18,35 @@ const About = ({ selectedColor, isDarkMode }) => {
   const navigate = useNavigate(); // React Router's navigation hook
 
   const personalInfo = [
-    { icon: <CakeIcon className="ml-4 h-5 w-5" />, label: 'Birthday', value: '20 Jan 2003' },
-    { icon: <EnvelopeIcon className=" ml-4 h-5 w-5" />, label: 'Email', value: 'dm143dilip@gmail.com' },
-    { icon: <DevicePhoneMobileIcon className=" ml-4 h-5 w-5" />, label: 'Mobile', value: '+91 7350541586' },
-    { icon: <CalendarDaysIcon className=" ml-4 h-5 w-5" />, label: 'Age', value: '23 Years' },
-    { icon: <AcademicCapIcon className=" ml-4 h-5 w-5" />, label: 'Degree', value: 'Bachelor of Engineer in Computer Enginner' },
-    { icon: <MapPinIcon className=" ml-4 h-5 w-5" />, label: 'City', value: 'Pune, Maharashtra, India' }
-  ];
+  { icon: <CakeIcon className="ml-4 h-5 w-5" />, label: 'Birthday', value: '20 Jan 2003' },
+
+  {
+    icon: <EnvelopeIcon className="ml-4 h-5 w-5" />,
+    label: 'Email',
+    value: (
+      <a
+        href="mailto:dm143dilip@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Dilip,"
+        className="hover:underline"
+        style={{ color: selectedColor.value }}
+      >
+        dm143dilip@gmail.com
+      </a>
+    )
+  },
+
+  { icon: <DevicePhoneMobileIcon className="ml-4 h-5 w-5" />, label: 'Mobile', value: '+91 7350541586' },
+  { icon: <CalendarDaysIcon className="ml-4 h-5 w-5" />, label: 'Age', value: '23 Years' },
+  { icon: <AcademicCapIcon className="ml-4 h-5 w-5" />, label: 'Degree', value: 'Bachelor of Engineering (B.E.) in Computer Engineering' },
+  { icon: <MapPinIcon className="ml-4 h-5 w-5" />, label: 'City', value: 'Pune, Maharashtra, India' }
+];
+  // const personalInfo = [
+  //   { icon: <CakeIcon className="ml-4 h-5 w-5" />, label: 'Birthday', value: '20 Jan 2003' },
+  //   { icon: <EnvelopeIcon className=" ml-4 h-5 w-5" />, label: 'Email', value: 'dm143dilip@gmail.com' },
+  //   { icon: <DevicePhoneMobileIcon className=" ml-4 h-5 w-5" />, label: 'Mobile', value: '+91 7350541586' },
+  //   { icon: <CalendarDaysIcon className=" ml-4 h-5 w-5" />, label: 'Age', value: '23 Years' },
+  //   { icon: <AcademicCapIcon className=" ml-4 h-5 w-5" />, label: 'Degree', value: 'Bachelor of Engineer in Computer Enginner' },
+  //   { icon: <MapPinIcon className=" ml-4 h-5 w-5" />, label: 'City', value: 'Pune, Maharashtra, India' }
+  // ];
 
 
   // Navigation functions for React Router

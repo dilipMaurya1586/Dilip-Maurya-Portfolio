@@ -14,15 +14,15 @@ const Contact = ({ selectedColor, isDarkMode }) => {
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
             Get In <span style={{ color: selectedColor.value }}>Touch</span>
           </h2>
-          
+
           <div className="flex flex-col items-center">
             {/* Horizontal Contact Information */}
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.3 }}
               className="w-full max-w-4xl p-8 rounded-xl shadow-lg"
-              style={{ 
+              style={{
                 backgroundColor: isDarkMode ? 'rgba(31, 41, 55, 0.7)' : 'rgba(255, 255, 255, 0.7)',
                 border: `1px solid ${selectedColor.value}20`
               }}
@@ -30,18 +30,18 @@ const Contact = ({ selectedColor, isDarkMode }) => {
               <h3 className="text-2xl font-semibold mb-8 text-center" style={{ color: selectedColor.value }}>
                 Contact Information
               </h3>
-              
+
               <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
                 {/* Email */}
-                <motion.div 
+                <motion.div
                   whileHover={{ y: -5 }}
                   className="flex flex-col items-center text-center p-4 rounded-lg transition-all"
-                  style={{ 
+                  style={{
                     backgroundColor: isDarkMode ? 'rgba(17, 24, 39, 0.5)' : 'rgba(249, 250, 251, 0.7)',
                     border: `1px solid ${selectedColor.value}30`
                   }}
                 >
-                  <div 
+                  <div
                     className="p-3 rounded-full mb-3"
                     style={{ backgroundColor: selectedColor.value }}
                   >
@@ -61,21 +61,30 @@ const Contact = ({ selectedColor, isDarkMode }) => {
                     </svg>
                   </div>
                   <h4 className="text-lg font-medium mb-1">Email</h4>
-                  <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <a
+                    href="mailto:dm143dilip@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Dilip,"
+                    className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                      } hover:underline`}
+                    style={{ color: selectedColor.value }}
+                  >
+                    dm143dilip@gmail.com
+                  </a>
+                  {/* <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                     dm143dilip@gemail.com
-                  </p>
+                  </p> */}
+
                 </motion.div>
-                
+
                 {/* Phone */}
-                <motion.div 
+                <motion.div
                   whileHover={{ y: -5 }}
                   className="flex flex-col items-center text-center p-4 rounded-lg transition-all"
-                  style={{ 
+                  style={{
                     backgroundColor: isDarkMode ? 'rgba(17, 24, 39, 0.5)' : 'rgba(249, 250, 251, 0.7)',
                     border: `1px solid ${selectedColor.value}30`
                   }}
                 >
-                  <div 
+                  <div
                     className="p-3 rounded-full mb-3"
                     style={{ backgroundColor: selectedColor.value }}
                   >
@@ -95,21 +104,31 @@ const Contact = ({ selectedColor, isDarkMode }) => {
                     </svg>
                   </div>
                   <h4 className="text-lg font-medium mb-1">Phone</h4>
-                  <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+
+                  <a
+                    href="tel:+917350541586"
+                    className="hover:underline"
+                    style={{ color: selectedColor.value }}
+                  >
                     +91 7350541586
-                  </p>
+                  </a>
+                  
+                  {/* <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    +91 7350541586
+                  </p> */}
+
                 </motion.div>
-                
+
                 {/* Location */}
-                <motion.div 
+                <motion.div
                   whileHover={{ y: -5 }}
                   className="flex flex-col items-center text-center p-4 rounded-lg transition-all"
-                  style={{ 
+                  style={{
                     backgroundColor: isDarkMode ? 'rgba(17, 24, 39, 0.5)' : 'rgba(249, 250, 251, 0.7)',
                     border: `1px solid ${selectedColor.value}30`
                   }}
                 >
-                  <div 
+                  <div
                     className="p-3 rounded-full mb-3"
                     style={{ backgroundColor: selectedColor.value }}
                   >
@@ -140,8 +159,8 @@ const Contact = ({ selectedColor, isDarkMode }) => {
                   </p>
                 </motion.div>
               </div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
