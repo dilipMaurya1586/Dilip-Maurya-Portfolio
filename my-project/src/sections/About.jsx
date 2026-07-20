@@ -21,9 +21,9 @@ const About = ({ selectedColor, isDarkMode }) => {
     { icon: <CakeIcon className="ml-4 h-5 w-5" />, label: 'Birthday', value: '20 Jan 2003' },
     { icon: <EnvelopeIcon className=" ml-4 h-5 w-5" />, label: 'Email', value: 'dm143dilip@gmail.com' },
     { icon: <DevicePhoneMobileIcon className=" ml-4 h-5 w-5" />, label: 'Mobile', value: '+91 7350541586' },
-    { icon: <CalendarDaysIcon className=" ml-4 h-5 w-5" />, label: 'Age', value: '22 Years' },
-    { icon: <AcademicCapIcon className=" ml-4 h-5 w-5" />, label: 'Degree', value: 'B.E Computer Enginner' },
-    { icon: <MapPinIcon className=" ml-4 h-5 w-5" />, label: 'City', value: 'Pune, India' }
+    { icon: <CalendarDaysIcon className=" ml-4 h-5 w-5" />, label: 'Age', value: '23 Years' },
+    { icon: <AcademicCapIcon className=" ml-4 h-5 w-5" />, label: 'Degree', value: 'Bachelor of Engineer in Computer Enginner' },
+    { icon: <MapPinIcon className=" ml-4 h-5 w-5" />, label: 'City', value: 'Pune, Maharashtra, India' }
   ];
 
 
@@ -69,15 +69,19 @@ const About = ({ selectedColor, isDarkMode }) => {
 
             <div className={`text-lg leading-relaxed mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               <p>
-                <span style={{ color: selectedColor.value }}> <b>I’m a MERN stack developer</b> </span>
-                passionate about bridging frontend elegance (React, Tailwind CSS) with backend
-                efficiency
-                (Node.js, MongoDB). My code prioritizes performance, maintainability, and scalability—whether refining UI
-                interactions or designing RESTful APIs.
+                <span style={{ color: selectedColor.value }}> <b>I'm a Java Full Stack Developer</b> </span>
+                passionate about building scalable
+                backend systems using Spring Boot, Microservices, and REST APIs, while
+                bridging them with clean, functional frontends using React and Tailwind
+                CSS. My code prioritizes performance, maintainability, and scalability —
+                whether designing microservices architecture or crafting RESTful APIs.
+                I also carry hands-on MERN Stack experience, which strengthens my
+                full-stack versatility.
+
               </p> <br />
               <p>
-                Beyond development, I tackle 300+ algorithmic problems, specializing in Tree traversals, dynamic programming.
-                and optimization
+                Beyond development, I've solved 150+ problems on LeetCode, and I enjoy
+                tackling algorithmic challenges alongside real-world backend engineering.
               </p>
             </div>
 
