@@ -60,7 +60,7 @@ export const projects = [
     tags: ['MERN stack', 'JavaScript', 'JWT Token', 'AI api'],
     category: 'mern',
     image: '/assets/images/projectsImage/chatGPT.png',
-    link: '',
+    link: 'https://chat-gpt-eight-opal.vercel.app/',
     githubLink: 'https://github.com/dilipMaurya1586/Chat-Gpt',
     icon: <CpuChipIcon className="h-6 w-6" />
   },
