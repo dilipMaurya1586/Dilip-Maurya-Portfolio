@@ -89,80 +89,6 @@ const Education = ({ selectedColor, isDarkMode }) => {
         </div>
 
         {/* Certifications */}
-        {/* <div>
-          <motion.h3
-            initial="hidden"
-            whileInView="visible"
-            variants={itemVariants}
-            viewport={{ once: true }}
-            className={`text-2xl font-bold mb-12 flex items-center justify-center gap-3 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}
-          >
-            <ShieldCheckIcon className="h-8 w-8" style={{ color: selectedColor.value }} />
-            Professional Certifications
-          </motion.h3>
-
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-9 ml-10 mr-10  "
-            initial="hidden"
-            whileInView="visible"
-            variants={containerVariants}
-            whileHover={cardHover}
-            viewport={{ once: true }}
-          >
-            {certifications.map((cert) => (
-              <motion.div
-                key={cert.id}
-                variants={itemVariants}
-                whileHover={{
-                  y: -8,
-                  scale: 1.02,
-                  boxShadow: `0 15px 30px -10px ${selectedColor.value}30`
-                }}
-                className={`rounded-xl p-6 transition-all duration-300 ${isDarkMode ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-200'} border shadow-md`}
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div
-                    className={`p-3 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'}`}
-                    style={{ color: selectedColor.value }}
-                  >
-                    {cert.icon}
-                  </div>
-                  <h4 className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{cert.title}</h4>
-                </div>
-                <div className="space-y-3">
-
-                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    <span className="font-medium">Issuer:</span> {cert.issuer}
-                  </p>
-
-                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    <span className="font-medium">Year:</span> {cert.year}
-                  </p>
-                  {cert.link && (
-                    <button
-                      onClick={() => window.open(cert.link, "_blank")}
-                      className="mt-5 px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-300"
-                      style={{
-                        backgroundColor: selectedColor.value,
-                        color: "#fff"
-                      }}
-                    >
-                      View Certificate
-                    </button>
-                  )}
-
-                  {cert.credential && (
-                    <p className={`text-xs ${isDarkMode ? 'text-gray-500' : 'text-gray-400'} font-mono`}>
-                      ID: {cert.credential}
-                    </p>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div> */}
-
-        {/* Certifications */}
         <div>
 
           <motion.h3
@@ -181,9 +107,11 @@ const Education = ({ selectedColor, isDarkMode }) => {
             Professional Certifications
           </motion.h3>
 
-
+          {/* flex-wrap + justify-center + items-stretch: same pattern used for the
+              Projects section, so cards line up consistently and center correctly
+              even if the count isn't a multiple of the column count. */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-9 ml-10 mr-10"
+            className="flex flex-wrap justify-center items-stretch gap-9 ml-10 mr-10"
             initial="hidden"
             whileInView="visible"
             variants={containerVariants}
@@ -200,17 +128,17 @@ const Education = ({ selectedColor, isDarkMode }) => {
                   scale: 1.02,
                   boxShadow: `0 15px 30px -10px ${selectedColor.value}30`
                 }}
-                className={`rounded-xl p-6 ${isDarkMode
+                className={`w-full sm:w-80 flex flex-col rounded-xl p-6 ${isDarkMode
                     ? 'bg-gray-800/50 border-gray-700'
                     : 'bg-white border-gray-200'
                   } border shadow-md`}
               >
 
                 {/* Icon + Title */}
-                <div className="flex items-start gap-4 mb-5">
+                <div className="flex items-start gap-4 mb-4">
 
                   <div
-                    className={`p-3 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'
+                    className={`p-3 rounded-lg flex-shrink-0 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'
                       }`}
                     style={{
                       color: selectedColor.value
@@ -219,9 +147,8 @@ const Education = ({ selectedColor, isDarkMode }) => {
                     {cert.icon}
                   </div>
 
-
                   <h4
-                    className={`font-bold text-lg ${isDarkMode ? 'text-white' : 'text-gray-900'
+                    className={`font-bold text-lg leading-snug ${isDarkMode ? 'text-white' : 'text-gray-900'
                       }`}
                   >
                     {cert.title}
@@ -229,63 +156,47 @@ const Education = ({ selectedColor, isDarkMode }) => {
 
                 </div>
 
+                {/* Skill tags - short chips instead of one long sentence */}
+                {cert.skills && cert.skills.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {cert.skills.map((skill, i) => (
+                      <span
+                        key={i}
+                        className="text-xs font-medium px-2 py-1 rounded"
+                        style={{
+                          backgroundColor: `${selectedColor.value}15`,
+                          color: selectedColor.value,
+                          border: `1px solid ${selectedColor.value}30`
+                        }}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                )}
 
-                {/* Details */}
-                <div className="space-y-3">
-
+                {/* Issuer / Year - pushed toward the bottom of the flex column */}
+                <div className="mt-auto">
                   <p
                     className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
                       }`}
                   >
-                    <span className="font-medium">
-                      Issuer:
-                    </span>{" "}
-                    {cert.issuer}
+                    <span className="font-medium">Issuer:</span> {cert.issuer}
+                    <span className="mx-2">•</span>
+                    <span className="font-medium">Year:</span> {cert.year}
                   </p>
-
-
-                  <p
-                    className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                      }`}
-                  >
-                    <span className="font-medium">
-                      Year:
-                    </span>{" "}
-                    {cert.year}
-                  </p>
-
-
-                  {/* View Certificate Button */}
-                  {/* <a
-            href={cert.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-5 px-5 py-2 rounded-lg text-sm font-semibold cursor-pointer"
-            style={{
-              backgroundColor: selectedColor.value,
-              color: "#ffffff"
-            }}
-          >
-            View Certificate
-          </a> */}
 
                   <button
                     type="button"
-                    onClick={() => {
-                      console.log("Button clicked");
-                      window.open(cert.link, "_blank");
-                    }}
-                    className="mt-5 px-5 py-2 rounded-lg text-sm font-semibold cursor-pointer"
+                    onClick={() => window.open(cert.link, "_blank")}
+                    className="mt-4 w-full px-5 py-2 rounded-lg text-sm font-semibold cursor-pointer"
                     style={{
                       backgroundColor: selectedColor.value,
-                      color: "#ffffff",
-                      position: "relative",
-                      zIndex: 50
+                      color: "#ffffff"
                     }}
                   >
                     View Certificate
                   </button>
-                  
                 </div>
 
               </motion.div>
@@ -302,4 +213,3 @@ const Education = ({ selectedColor, isDarkMode }) => {
 };
 
 export default Education;
-

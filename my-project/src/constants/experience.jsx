@@ -13,6 +13,8 @@ export const experienceData = [
             "Deployed the application to production — configured environment variables, managed domain setup, and resolved server issues post-deployment.",
             "Gained hands-on experience with backend fundamentals — REST API design, database modeling, and deployment workflows — that carry directly into my current focus on Java, Spring Boot, and Microservices.",
         ],
-        technologies: ["REST APIs", "PostgreSQL", "Postman", "Python", "Django"]
+        technologies: ["REST APIs", "PostgreSQL", "Postman", "Python", "Django"],
+        certificateLink: "/assets/images/certificates/exprence-certificates/Intership_certifict.pdf",
+        allotmentLetterLink: "/assets/images/certificates/exprence-certificates/internship_allotment_latter .pdf"
     },
 ];

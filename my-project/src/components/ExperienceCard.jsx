@@ -98,6 +98,49 @@ const ExperienceCard = ({ experience, selectedColor, isDarkMode }) => {
                     ))}
                 </motion.div>
             )}
+
+            {/* Document buttons - Certificate + Allotment Letter, same style as project buttons */}
+            {(experience.certificateLink || experience.allotmentLetterLink) && (
+                <div className="mt-6 pt-4 border-t flex flex-wrap items-center justify-center gap-3"
+                    style={{ borderColor: `${selectedColor.value}30` }}
+                >
+                    {experience.certificateLink && (
+                        <motion.a
+                            href={experience.certificateLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-4 py-2 text-sm rounded-full text-center font-medium"
+                            style={{
+                                backgroundColor: selectedColor.value,
+                                color: 'white',
+                                border: `2px solid ${selectedColor.value}`,
+                            }}
+                        >
+                            View Certificate
+                        </motion.a>
+                    )}
+
+                    {experience.allotmentLetterLink && (
+                        <motion.a
+                            href={experience.allotmentLetterLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-4 py-2 text-sm rounded-full text-center font-medium"
+                            style={{
+                                backgroundColor: selectedColor.value,
+                                color: 'white',
+                                border: `2px solid ${selectedColor.value}`,
+                            }}
+                        >
+                            View Allotment Letter
+                        </motion.a>
+                    )}
+                </div>
+            )}
         </motion.div>
     );
 };

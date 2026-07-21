@@ -25,39 +25,17 @@ export const educationData = [
 
 ];
 
-// Certifications Data
-// export const certifications = [
-//   {
-//     id: 1,
-//     title: "Spring Boot Microservices, Apache Kafka, Docker, Kubernetes, CI/CD & Spring AI, Spring Boot MVC and RESTful APIs, Spring Security, Hibernate and Spring Boot Data JPA",
-//     issuer: "Coding Shuttle",
-//     year: "2026",
-//     icon: <ShieldCheckIcon className="h-6 w-6" />
-//   },
-//   {
-//     id: 2,
-//     title: "Java, Data Structures and Algorithms (DSA)",
-//     issuer: "Apna College",
-//     year: "2023",
-//     icon: <ShieldCheckIcon className="h-6 w-6" />
-//   },
-//   {
-//     id: 3,
-//     title: "MERN Stack Developer",
-//     issuer: "Apna College",
-//     year: "2024",
-//     icon: <ShieldCheckIcon className="h-6 w-6" />
-//   },
-
-// ];
-
+// Certifications Data - long tech lists are now split out into a "skills" array
+// (rendered as small tag chips) instead of one giant title sentence, so all
+// certification cards stay similar height and look consistent, like the project cards.
 export const certifications = [
   {
     id: 1,
-    title: "Spring Boot Microservices, Apache Kafka, Docker, Kubernetes, CI/CD & Spring AI, Spring Boot MVC and RESTful APIs, Spring Security, Hibernate and Spring Boot Data JPA",
+    title: "Spring Boot Microservices & DevOps",
     issuer: "Coding Shuttle",
     year: "2026",
-    link: "/assets/images/certificatesImages/Spring-Boot-course-completion-certificate.pdf",
+    skills: ["Spring Boot", "Kafka", "Docker", "Kubernetes", "CI/CD", "Spring Security", "Hibernate", "Spring Data JPA"],
+    link: "/assets/images/certificates/course-certificates/Spring-Boot-course-completion-certificate.pdf",
     icon: <ShieldCheckIcon className="h-6 w-6" />
   },
   {
@@ -65,7 +43,8 @@ export const certifications = [
     title: "Java, Data Structures and Algorithms (DSA)",
     issuer: "Apna College",
     year: "2023",
-    link: "/assets/images/certificatesImages/Java-Certificare.pdf",
+    skills: ["Java", "DSA", "Problem Solving"],
+    link: "/assets/images/certificates/course-certificates/Java-Certificare.pdf",
     icon: <ShieldCheckIcon className="h-6 w-6" />
   },
   {
@@ -73,7 +52,8 @@ export const certifications = [
     title: "MERN Stack Developer",
     issuer: "Apna College",
     year: "2024",
-    link: "/assets/images/certificatesImages/MERN-Stack-Certificare.pdf",
+    skills: ["React", "Node.js", "Express", "MongoDB"],
+    link: "/assets/images/certificates/course-certificates/MERN-Stack-Certificare.pdf",
     icon: <ShieldCheckIcon className="h-6 w-6" />
   },
 
