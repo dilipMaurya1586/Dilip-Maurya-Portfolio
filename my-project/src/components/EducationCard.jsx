@@ -44,7 +44,7 @@ const EducationCard = ({
                 <div className={`px-3 py-1 rounded-md inline-block text-xs font-medium mb-3 ${isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-600'}`}>
                     {education.year}
                 </div>
-                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                <p className={`text-justify ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                     {education.description}
                 </p>
             </motion.div>

@@ -40,7 +40,7 @@ const Home = ({ selectedColor, isDarkMode }) => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full lg:w-2/3 xl:w-3/5"
+            className="w-full lg:w-2/3 xl:w-3/5 text-center lg:text-left"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6">
               Hi, I'm{" "}
@@ -66,7 +66,7 @@ const Home = ({ selectedColor, isDarkMode }) => {
             </h1>
 <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 md:mb-8">
   <motion.div
-    className="flex flex-wrap items-center gap-x-2 sm:gap-x-4"
+    className="flex flex-wrap items-center justify-center lg:justify-start gap-x-2 sm:gap-x-4"
     initial={{ opacity: 0 }}
     animate={{ opacity: 2 }}
     transition={{ staggerChildren: 0.1 }}>
@@ -78,8 +78,8 @@ const Home = ({ selectedColor, isDarkMode }) => {
   </motion.div>
 </h2>
 
-            <div className={`text-base sm:text-lg mb-6 md:mb-8 space-y-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              <p>
+            <div className={`text-base sm:text-lg mb-6 md:mb-8 space-y-4 text-justify ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              <p className="indent-6 sm:indent-8">
                 <span style={{ color: selectedColor.value }} className='underline'> <b>I am a Java Full Stack Developer</b> </span>
                 skilled in Spring Boot, Spring Cloud,
                 Microservices, and REST APIs, along with React.js for building complete
@@ -88,7 +88,7 @@ const Home = ({ selectedColor, isDarkMode }) => {
                 full stack.
 
               </p>
-              <p>
+              <p className="indent-6 sm:indent-8">
                 I've built OrderFlowX, a microservices e-commerce platform with Kafka
                 and Razorpay integration, and solved 150+ problems on LeetCode. During
                 my internship at Elite Softwares, I built and deployed 10+ REST APIs
@@ -96,7 +96,7 @@ const Home = ({ selectedColor, isDarkMode }) => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-9">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-9">
               <div className="relative">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -115,7 +115,7 @@ const Home = ({ selectedColor, isDarkMode }) => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className={`absolute top-full left-0 mt-1 w-64 rounded-xl shadow-2xl border z-50 overflow-hidden ${
+                      className={`absolute top-full left-0 mt-1 w-64 rounded-xl shadow-2xl border z-50 overflow-hidden text-left ${
                         isDarkMode
                           ? 'bg-gray-800 border-gray-700'
                           : 'bg-white border-gray-200'

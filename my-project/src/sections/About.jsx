@@ -75,8 +75,8 @@ const About = ({ selectedColor, isDarkMode }) => {
             viewport={{ once: true }}
           >
 
-            <div className={`text-lg leading-relaxed mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              <p>
+            <div className={`text-lg leading-relaxed mb-8 text-justify text-center lg:text-left ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              <p className="lg:indent-8">
                 <span style={{ color: selectedColor.value }}> <b>I'm a Java Full Stack Developer</b> </span>
                 passionate about building scalable
                 backend systems using Spring Boot, Microservices, and REST APIs, while
@@ -87,7 +87,7 @@ const About = ({ selectedColor, isDarkMode }) => {
                 full-stack versatility.
 
               </p> <br />
-              <p>
+              <p className="lg:indent-8">
                 Beyond development, I've solved 150+ problems on LeetCode, and I enjoy
                 tackling algorithmic challenges alongside real-world backend engineering.
               </p>

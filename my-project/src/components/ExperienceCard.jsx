@@ -68,7 +68,7 @@ const ExperienceCard = ({ experience, selectedColor, isDarkMode }) => {
                             className="inline-block mt-2 mr-3 h-2 w-2 rounded-full flex-shrink-0"
                             style={{ backgroundColor: selectedColor.value }}
                         />
-                        <span className="text-sm md:text-base leading-relaxed">{item}</span>
+                        <span className="text-sm md:text-base leading-relaxed text-justify">{item}</span>
                     </motion.li>
                 ))}
             </ul>
