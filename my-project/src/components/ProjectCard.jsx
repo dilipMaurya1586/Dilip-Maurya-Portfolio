@@ -6,10 +6,10 @@ const ProjectCard = ({ project, selectedColor, isDarkMode }) => {
       whileHover="hover"
       initial="initial"
       animate="animate"
-      className="relative overflow-hidden rounded-xl shadow-lg w-full sm:w-80"
+      className="relative overflow-hidden rounded-xl shadow-lg w-full sm:w-96"
     >
       {/* Project Image */}
-      <div className="h-40 sm:h-48 overflow-hidden">
+      <div className="h-44 sm:h-56 overflow-hidden">
         <motion.img
           src={project.image}
           alt={project.title}
