@@ -5,7 +5,7 @@ export const projects = [
   {
     title: 'SplitSettle (Group Expense Splitter)',
     description: 'A microservices-based expense-splitting app for groups — create groups, add expenses with equal/exact/percentage splits, AI-powered natural-language expense entry, and automatic settlement calculation showing who owes whom.',
-    tags: ['Java', 'Spring Boot', 'Spring Cloud', 'Eureka', 'Spring Security', 'JWT', 'Apache Kafka', 'Spring AI'],
+    tags: ['Java', 'Spring Boot', 'Spring Cloud', 'Eureka', 'API Gateway', 'Spring Security', 'JWT', 'Apache Kafka', 'PostgreSQL', 'React', 'Spring AI'],
     category: 'java',
     image: '/assets/images/projectsImage/SplitSettle.png',
     link: 'https://splitsettle-frontend.vercel.app/',
