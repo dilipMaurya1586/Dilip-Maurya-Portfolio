@@ -7,7 +7,7 @@ const Home = ({ selectedColor, isDarkMode }) => {
   const [showResumeOptions, setShowResumeOptions] = useState(false);
 
   const resumeOptions = [
-    { label: 'Full Stack Resume', file: '/assets/cvPdf/Dilip_Maurya_Resume_Java_FullStack.pdf' },
+    { label: 'Full Stack Resume', file: '/assets/cvPdf/Dilip_Maurya Resume Java Full Stack.pdf' },
     { label: 'Backend Resume', file: '/assets/cvPdf/Dilip_Maurya_Resume_Backend.pdf' },
     { label: 'Software Developer Resume', file: '/assets/cvPdf/Dilip_Maurya_Resume_SDE.pdf' },
   ];
@@ -64,19 +64,19 @@ const Home = ({ selectedColor, isDarkMode }) => {
                 Dilip Maurya.
               </motion.span>
             </h1>
-<h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 md:mb-8">
-  <motion.div
-    className="flex flex-wrap items-center justify-center lg:justify-start gap-x-2 sm:gap-x-4"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 2 }}
-    transition={{ staggerChildren: 0.1 }}>
-    <motion.span
-      style={{ color: selectedColor.value }}
-      whileHover={{ scale: 1.2 }}>JAVA</motion.span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 md:mb-8">
+              <motion.div
+                className="flex flex-wrap items-center justify-center lg:justify-start gap-x-2 sm:gap-x-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 2 }}
+                transition={{ staggerChildren: 0.1 }}>
+                <motion.span
+                  style={{ color: selectedColor.value }}
+                  whileHover={{ scale: 1.2 }}>JAVA</motion.span>
 
-    <span>Full Stack Developer</span>
-  </motion.div>
-</h2>
+                <span>Full Stack Developer</span>
+              </motion.div>
+            </h2>
 
             <div className={`text-base sm:text-lg mb-6 md:mb-8 space-y-4 text-justify ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               <p className="indent-6 sm:indent-8">
@@ -115,21 +115,19 @@ const Home = ({ selectedColor, isDarkMode }) => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className={`absolute top-full left-0 mt-1 w-64 rounded-xl shadow-2xl border z-50 overflow-hidden text-left ${
-                        isDarkMode
+                      className={`absolute top-full left-0 mt-1 w-64 rounded-xl shadow-2xl border z-50 overflow-hidden text-left ${isDarkMode
                           ? 'bg-gray-800 border-gray-700'
                           : 'bg-white border-gray-200'
-                      }`}
+                        }`}
                     >
                       {resumeOptions.map((resume, index) => (
                         <button
                           key={index}
                           onClick={() => downloadResume(resume.file)}
-                          className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm transition-colors border-b last:border-b-0 ${
-                            isDarkMode
+                          className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm transition-colors border-b last:border-b-0 ${isDarkMode
                               ? 'text-gray-200 border-gray-700 hover:bg-gray-700'
                               : 'text-gray-700 border-gray-100 hover:bg-gray-100'
-                          }`}
+                            }`}
                         >
                           <span>{resume.label}</span>
                           <span
