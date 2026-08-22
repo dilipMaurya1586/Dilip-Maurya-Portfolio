@@ -2,15 +2,16 @@ import { CodeBracketIcon, CpuChipIcon, DevicePhoneMobileIcon } from '@heroicons/
 
 export const projects = [
 
-  // {
-  //     title: 'OrderFlowX',
-  //     description: 'A microservices-based e-commerce platform with 5 independent services (User, Order, Inventory, Payment, API Gateway), Kafka-based async communication, and end-to-end Razorpay payment integration.',
-  //     tags: ['Java', 'Spring Boot', 'Spring Cloud Gateway', 'Kafka', 'PostgreSQL', 'React', 'Docker'],
-  //     category: 'java',
-  //     image: '/assets/images/projectsImage/orderflowx.png',
-  //     link: '',
-  //     icon: <CpuChipIcon className="h-6 w-6" />
-  //   },
+  {
+    title: 'SplitSettle (Group Expense Splitter)',
+    description: 'A microservices-based expense-splitting app for groups — create groups, add expenses with equal/exact/percentage splits, AI-powered natural-language expense entry, and automatic settlement calculation showing who owes whom.',
+    tags: ['Java', 'Spring Boot', 'Spring Cloud', 'Eureka', 'API Gateway', 'Spring Security', 'JWT', 'Apache Kafka', 'PostgreSQL', 'React', 'Spring AI'],
+    category: 'java',
+    image: '/assets/images/projectsImage/SplitSettle.png',
+    link: 'https://splitsettle-frontend.vercel.app/',
+    githubLink: 'https://github.com/dilipMaurya1586/splitsettle',
+    icon: <CpuChipIcon className="h-6 w-6" />
+  },
   {
     title: 'Hotel Booking Platform (Airbnb Clone)',
     description: 'A full-stack hotel booking application with role-based access for Admin and User, featuring property/room management, search filters, and server-side date-overlap validation for bookings.',
@@ -51,7 +52,7 @@ export const projects = [
     image: '/assets/images/projectsImage/carRental.png',
     link: 'https://car-rental-frontend-red.vercel.app/',
     githubLink: 'https://github.com/dilipMaurya1586/CarRental',
-    
+
     icon: <CpuChipIcon className="h-6 w-6" />
   },
   {
